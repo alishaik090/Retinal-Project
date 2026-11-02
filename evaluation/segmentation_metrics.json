@@ -1,0 +1,10 @@
+{
+  "task": "DRIVE retinal vessel segmentation",
+  "evaluation_protocol": "Deterministic 60/20/20 split of the 20 manually labelled DRIVE training images. Loss and metrics restricted to DRIVE field of view. Threshold selected only on validation.",
+  "warning": "Small internal split; not the hidden official DRIVE test benchmark.",
+  "model": {"name": "ResNet18UNet", "architecture": "resnet18_unet", "image_size": 256},
+  "seed": 42,
+  "threshold": 0.65,
+  "splits": {"train": ["40", "26", "35", "25", "30", "34", "36", "39", "27", "33", "38", "31"], "validation": ["22", "32", "23", "37"], "test": ["28", "29", "21", "24"]},
+  "test_metrics": {"dice": 0.7216746004115394, "iou": 0.5645922278700538, "precision": 0.7541254411671234, "recall": 0.6957480709235406, "specificity": 0.9651566648953236, "pixel_accuracy": 0.9277071364612449}
+}

@@ -1,0 +1,8 @@
+services:
+  retina-service:
+    build: .
+    env_file: .env
+    ports:
+      - "${PORT:-8000}:8000"
+    volumes:
+      - ./app/model/weights:/service/app/model/weights:ro
